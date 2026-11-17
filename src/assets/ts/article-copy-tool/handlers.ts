@@ -71,7 +71,7 @@ export const textHandlers: TextHandlers = {
 
   deleteReferenceBadge: {
     description: "删除引用角标，如: [1], [2, 3], [4-7]",
-    activate: true,
+    activate: false,
     executor: text => {
       text = text.replaceAll(/\[[\d,\-\s]+]/g, "");
       text = text.replaceAll(/【[\d,\-\s]+】/g, "");
@@ -112,7 +112,7 @@ export const textHandlers: TextHandlers = {
 
   /** 替换换行符为空格 (参考：https://blog.csdn.net/lfod1997/article/details/121095287) */
   replaceNewlinesWithSpaces: {
-    activate: true,
+    activate: false,
     description: "将换行符替换为空格",
     executor: (text: string) => text.replaceAll(/[\f\r\t\n]/g, " "),
   },
@@ -132,7 +132,7 @@ export const textHandlers: TextHandlers = {
   },
 
   addSpaceAfterEnglishPunctuation: {
-    activate: true,
+    activate: false,
     description: "在标点符号后添加空格",
     executor: (text: string) => text
       .replaceAll(/([,.?:;])([^,.?:;\s])/g, "$1 $2")
@@ -154,7 +154,7 @@ export const textHandlers: TextHandlers = {
   },
 
   deleteSpaceBetweenColonAndNumber: {
-    activate: false,
+    activate: true,
     description: "删除冒号和数字之间的空格",
     executor: (text: string) => text.replaceAll(/(:)\s+(\d)/g, "$1$2"),
   },
