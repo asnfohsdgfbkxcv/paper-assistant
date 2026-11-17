@@ -5,8 +5,6 @@ import {useStorage} from "vue3-storage";
 import packageJson from "../../../package.json";
 import {useNotification, NButton} from "naive-ui";
 import useIntroducer from "../../assets/ts/article-copy-tool/useIntroducer";
-import axios from "axios";
-import MarkdownParser from "../article-copy-tool/components/InputAndOutputArea/components/components/MarkdownParser.vue";
 
 const store = useStore();
 const storage = useStorage();
@@ -33,7 +31,6 @@ class ProjectInitiator {
     }
 
     this.updateStorageInPinia();
-    this.checkReleasedVersion();
   }
 
   watchStorage() {
@@ -86,35 +83,6 @@ class ProjectInitiator {
 
   updateStorageInPinia() {
     store.storage = {...store.storage, ...this.storage, version: packageJson.version};
-  }
-
-  async checkReleasedVersion() {
-    async function refreshApiData() {
-      const RELEASED_API_URL = "https://gitee.com/api/v5/repos/laorange/paper-assistant/releases/latest";
-      try {
-        let apiData = (await axios.get(RELEASED_API_URL)).data;
-        let latestVersion = (apiData?.tag_name?.replace("v", "") ?? "") as string;
-        store.storage.releasedInfo.time = timeStampNow;
-        store.storage.releasedInfo.version = latestVersion;
-        store.storage.releasedInfo.body = apiData?.body ?? "";
-      } catch (e) {
-        console.error(e);
-      }
-    }
-
-    function informUser() {
-      notification.warning({
-        title: "🎉新版本已发布",
-        description: () => h("div", {innerHTML: `当前版本：v${packageJson.version}，最新版本：v${store.storage.releasedInfo.version}<br/>可在视频置顶评论中获取下载地址😄`}),
-        content: () => h(MarkdownParser, {markdown: store.storage.releasedInfo.body}),
-      });
-    }
-
-    let timeStampNow = (new Date).getTime();
-    if (timeStampNow - store.storage.releasedInfo.time > 1000 * 60 * 30) {  // 30分钟内，只会查询&提醒一次
-      await refreshApiData();
-      if (store.storage.releasedInfo.version !== packageJson.version) informUser();
-    }
   }
 }
 

@@ -1,14 +1,24 @@
 <h1 align="center">📝论文工具</h1>
 
 <p align="center">
-  本仓库为 <a href="https://github.com/laorange/paper-assistant">laorange/paper-assistant</a> 的修改版：开启「自动复制输出」后，会在输出更新时立即复制到剪贴板，以适配新版 Edge/Chrome 在页面失焦后无法写入剪贴板的限制。
+  本仓库是 <a href="https://github.com/laorange/paper-assistant">laorange/paper-assistant</a> 的修改版。<br/>
+  原项目由 <a href="https://github.com/laorange">laorange</a> 开发并以 AGPL-3.0 协议开源，在此向原作者致谢。
 </p>
 
 <p align="center">
-  <a href="https://asnfohsdgfbkxcv.github.io/paper-assistant/" target="_blank">在线使用（本仓库）</a>
+  本修改版的主要改动：开启「自动复制输出」后，会在输出更新时立即复制到剪贴板，以适配新版 Edge/Chrome 在页面失焦后无法写入剪贴板的限制；并去掉了原站顶部的升级公测横幅。
 </p>
 
 <p align="center">
+  <a href="https://asnfohsdgfbkxcv.github.io/paper-assistant/" target="_blank">在线使用</a>
+  |
+  <a href="https://github.com/asnfohsdgfbkxcv/paper-assistant" target="_blank">本仓库源码</a>
+</p>
+
+<p align="center">
+  原项目：
+  <a href="https://github.com/laorange/paper-assistant" target="_blank">源码</a>
+  |
   <a href="https://laorange.github.io/paper-assistant/" target="_blank">在线使用(GitHub)</a>
   |
   <a href="https://laorange.gitee.io/paper-assistant" target="_blank">在线使用(Gitee)</a>
@@ -19,9 +29,9 @@
 <p align="center">
   <a href="/src/assets/UpdatedLogs.md" target="_blank">更新日志</a>
   |
-  <a href="https://www.bilibili.com/video/BV1ZG4y1N7oM/" target="_blank">视频介绍</a>
+  <a href="https://www.bilibili.com/video/BV1ZG4y1N7oM/" target="_blank">原作者视频介绍</a>
   |
-  <a href="http://qny.quoi.top/img/sponsor-qr.jpg" target="_blank">鼓励作者</a>
+  <a href="http://qny.quoi.top/img/sponsor-qr.jpg" target="_blank">鼓励原作者</a>
 </p>
 
 ## 功能
@@ -34,7 +44,7 @@
 
 💡开发这个项目正是为了解决这些问题。
 
-🚩如何使用？可直接[在线使用](https://laorange.gitee.io/paper-assistant)后点击"使用说明"，或前往B站查看[视频介绍](https://www.bilibili.com/video/BV1ZG4y1N7oM/)。
+🚩如何使用？可直接[在线使用](https://asnfohsdgfbkxcv.github.io/paper-assistant/)后点击"使用说明"，或前往B站查看[原作者视频介绍](https://www.bilibili.com/video/BV1ZG4y1N7oM/)。
 
 #### (2) 英文语法检查
 
@@ -84,7 +94,7 @@
 
 ## 致开发者
 
-😉为方便看代码的朋友，我把文本处理的方法都单独整理成了[一个文件](https://github.com/laorange/paper-assistant/blob/master/src/assets/ts/article-copy-tool/handlers.ts)，并写了注释、规范了接口：
+😉为方便看代码的朋友，原作者把文本处理的方法都单独整理成了[一个文件](https://github.com/asnfohsdgfbkxcv/paper-assistant/blob/master/src/assets/ts/article-copy-tool/handlers.ts)，并写了注释、规范了接口：
 
 ```typescript
 // handlers.ts
@@ -95,8 +105,8 @@ export interface TextHandler {
 }
 ```
 
-😄若您有好的想法，可以在以上内容的基础上修改。欢迎在GitHub仓库上发起 [`pull request`](https://github.com/laorange/paper-assistant/pulls)😊
+😄若您有好的想法，可以在以上内容的基础上修改。欢迎在本仓库发起 [`pull request`](https://github.com/asnfohsdgfbkxcv/paper-assistant/pulls)。若要贡献给原项目，请前往 [`laorange/paper-assistant`](https://github.com/laorange/paper-assistant)。
 
-🥳若您觉得本项目还不错，可以在页面右上角为本项目点上一颗⭐~
+🥳若您觉得本修改版或[原项目](https://github.com/laorange/paper-assistant)还不错，欢迎点上一颗⭐~
 
 <div align="center"><img src="https://api.star-history.com/svg?repos=laorange/paper-assistant&type=Date" alt="Star History Chart" /></div>

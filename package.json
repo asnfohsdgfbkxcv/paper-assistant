@@ -1,9 +1,17 @@
 {
-  "name": "@laorange/paper-assistant",
+  "name": "@asnfohsdgfbkxcv/paper-assistant",
   "private": false,
-  "author": "laorange",
+  "author": "asnfohsdgfbkxcv (fork of laorange/paper-assistant)",
   "license": "AGPL-3.0",
-  "version": "1.2.3",
+  "version": "1.2.4",
+  "homepage": "https://asnfohsdgfbkxcv.github.io/paper-assistant/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asnfohsdgfbkxcv/paper-assistant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/asnfohsdgfbkxcv/paper-assistant/issues"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite --host",
