@@ -1,12 +1,12 @@
-<h1 align="center">📝论文工具</h1>
+<h1 align="center">📝文本排版</h1>
 
 <p align="center">
   本仓库是 <a href="https://github.com/laorange/paper-assistant">laorange/paper-assistant</a> 的修改版。<br/>
-  原项目由 <a href="https://github.com/laorange">laorange</a> 开发并以 AGPL-3.0 协议开源，在此向原作者致谢。
+  原项目名为「论文工具」，由 <a href="https://github.com/laorange">laorange</a> 开发并以 AGPL-3.0 协议开源，在此向原作者致谢。
 </p>
 
 <p align="center">
-  本修改版的主要改动：开启「自动复制输出」后，会在输出更新时立即复制到剪贴板，以适配新版 Edge/Chrome 在页面失焦后无法写入剪贴板的限制；并去掉了原站顶部的升级公测横幅。
+  本修改版的主要改动：开启「自动复制输出」后，会在输出更新时立即复制到剪贴板，以适配新版 Edge/Chrome 在页面失焦后无法写入剪贴板的限制；去掉了原站顶部的升级公测横幅；并将产品名称改为「文本排版」。
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@
 
 😫如果手动删改，工作量巨大；如果直接全文替换，可能会误删英文单词间的空格。
 
-💡开发这个项目正是为了解决这些问题。
+💡原项目「论文工具」正是为了解决这些问题而开发。
 
 🚩如何使用？可直接[在线使用](https://asnfohsdgfbkxcv.github.io/paper-assistant/)后点击"使用说明"，或前往B站查看[原作者视频介绍](https://www.bilibili.com/video/BV1ZG4y1N7oM/)。
 
@@ -87,11 +87,6 @@
 
 空行素材来自**Acrobat**，空格素材来自**Zotero**，乱码素材来源于**CAJViewer**，全角字符素材来自**知云文献**，重复换行素材来源于**Typora**。
 
-#### 还有哪些具有相似功能的程序？
-
-1. 若使用quicker，可搜索安装**英文规范粘贴**和**中文规范粘贴**插件。
-2. **copy++**：[项目地址](https://github.com/CopyPlusPlus/CopyPlusPlus) | [官方网站](https://copyplusplus.tk/)
-
 ## 致开发者
 
 😉为方便看代码的朋友，原作者把文本处理的方法都单独整理成了[一个文件](https://github.com/asnfohsdgfbkxcv/paper-assistant/blob/master/src/assets/ts/article-copy-tool/handlers.ts)，并写了注释、规范了接口：
@@ -106,7 +101,3 @@ export interface TextHandler {
 ```
 
 😄若您有好的想法，可以在以上内容的基础上修改。欢迎在本仓库发起 [`pull request`](https://github.com/asnfohsdgfbkxcv/paper-assistant/pulls)。若要贡献给原项目，请前往 [`laorange/paper-assistant`](https://github.com/laorange/paper-assistant)。
-
-🥳若您觉得本修改版或[原项目](https://github.com/laorange/paper-assistant)还不错，欢迎点上一颗⭐~
-
-<div align="center"><img src="https://api.star-history.com/svg?repos=laorange/paper-assistant&type=Date" alt="Star History Chart" /></div>

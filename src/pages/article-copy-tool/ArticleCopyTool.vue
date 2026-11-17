@@ -5,7 +5,7 @@ import InputAndOutputArea from "./components/InputAndOutputArea/InputAndOutputAr
 
 <template>
   <div class="article-copy-tool">
-    <HeaderArea title="论文工具"/>
+    <HeaderArea title="文本排版"/>
     <InputAndOutputArea/>
   </div>
 </template>

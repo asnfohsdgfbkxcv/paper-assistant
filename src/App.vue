@@ -28,7 +28,8 @@ const theme = computed(() => store.storage.darkMode ? darkTheme : null);
         <CopyrightFooter :project-url="projectUrl" :version="packageJson.version"
                          :author="authorLine"
                          repo-button-text="查看代码"
-                         :bilibili-url="bilibiliUrl">
+                         :bilibili-url="bilibiliUrl"
+                         bilibili-text="原作者视频介绍">
           <div>本站为修改版。若您遇到问题或有好的建议😊欢迎在<a target="_blank" :href="issuesUrl">GitHub</a>留言
           </div>
         </CopyrightFooter>

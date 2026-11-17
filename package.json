@@ -3,7 +3,8 @@
   "private": false,
   "author": "asnfohsdgfbkxcv (fork of laorange/paper-assistant)",
   "license": "AGPL-3.0",
-  "version": "1.2.6",
+  "version": "1.2.7",
+  "description": "文本排版：修改自 laorange/paper-assistant（原名「论文工具」）",
   "homepage": "https://asnfohsdgfbkxcv.github.io/paper-assistant/",
   "repository": {
     "type": "git",
