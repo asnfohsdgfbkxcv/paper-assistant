@@ -112,7 +112,7 @@ export const textHandlers: TextHandlers = {
 
   /** 替换换行符为空格 (参考：https://blog.csdn.net/lfod1997/article/details/121095287) */
   replaceNewlinesWithSpaces: {
-    activate: false,
+    activate: true,
     description: "将换行符替换为空格",
     executor: (text: string) => text.replaceAll(/[\f\r\t\n]/g, " "),
   },
