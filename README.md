@@ -1,6 +1,14 @@
 <h1 align="center">📝论文工具</h1>
 
 <p align="center">
+  本仓库为 <a href="https://github.com/laorange/paper-assistant">laorange/paper-assistant</a> 的修改版：开启「自动复制输出」后，会在输出更新时立即复制到剪贴板，以适配新版 Edge/Chrome 在页面失焦后无法写入剪贴板的限制。
+</p>
+
+<p align="center">
+  <a href="https://asnfohsdgfbkxcv.github.io/paper-assistant/" target="_blank">在线使用（本仓库）</a>
+</p>
+
+<p align="center">
   <a href="https://laorange.github.io/paper-assistant/" target="_blank">在线使用(GitHub)</a>
   |
   <a href="https://laorange.gitee.io/paper-assistant" target="_blank">在线使用(Gitee)</a>

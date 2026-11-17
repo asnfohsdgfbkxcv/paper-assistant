@@ -59,7 +59,7 @@ export default function useIntroducer() {
             {
                 element: document.querySelector(".copy-output-when-leave-switch"),
                 title: `自动复制输出`,
-                intro: `（若启用该项）当离开本网页时，输出框中的内容将会被自动复制，以便在别处使用`,
+                intro: `（若启用该项）当输出框内容更新时，会立即复制到剪贴板，以便在别处直接粘贴。不再等到离开页面时再复制，以避免新版 Edge/Chrome 在页面失焦后拦截写入剪贴板`,
             },
             {
                 element: document.querySelector(".auto-output-switch"),

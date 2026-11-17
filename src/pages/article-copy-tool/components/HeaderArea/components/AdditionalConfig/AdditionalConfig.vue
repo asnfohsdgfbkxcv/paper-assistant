@@ -2,20 +2,38 @@
 import {useStore} from "../../../../../../store/useStore";
 import ConfigSwitchButton from "./components/ConfigSwitchButton.vue";
 import useClipboard from "vue-clipboard3";
-import {onBeforeUnmount, onMounted} from "vue";
-import {useMessage} from "naive-ui";
+import {onBeforeUnmount, onMounted, watch} from "vue";
 
 const store = useStore();
 const {toClipboard} = useClipboard();
-const message = useMessage();
 
 const THRESHOLD_WIDTH = 600;
 const hasNotEnoughWidth = document.body.clientWidth < THRESHOLD_WIDTH;
 
+let copyTimer: ReturnType<typeof setTimeout> | undefined;
+let lastCopied = "";
+
+function copyOutputText() {
+  const text = store.copy.outputText;
+  if (!store.storage.copy.copyOutputWhenLeave || !text || text === lastCopied) return;
+  if (typeof document !== "undefined" && !document.hasFocus()) return;
+
+  clearTimeout(copyTimer);
+  copyTimer = setTimeout(() => {
+    const latest = store.copy.outputText;
+    if (!store.storage.copy.copyOutputWhenLeave || !latest || latest === lastCopied) return;
+    if (typeof document !== "undefined" && !document.hasFocus()) return;
+    toClipboard(latest)
+      .then(() => {
+        lastCopied = latest;
+      })
+      .catch(() => {
+        // 页面失焦或浏览器拦截时静默失败
+      });
+  }, 80);
+}
+
 function onLeavePage() {
-  if (store.storage.copy.copyOutputWhenLeave && store.copy.outputText) {
-    toClipboard(store.copy.outputText).then(() => message.success("复制输出文本: 成功"));
-  }
   if (store.storage.copy.clearInputWhenLeave) store.copy.inputText = "";
 }
 
@@ -29,7 +47,15 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   window.removeEventListener("blur", onLeavePage);
+  clearTimeout(copyTimer);
 });
+
+watch(
+  () => [store.copy.outputText, store.storage.copy.copyOutputWhenLeave] as const,
+  () => {
+    copyOutputText();
+  },
+);
 </script>
 
 <template>
